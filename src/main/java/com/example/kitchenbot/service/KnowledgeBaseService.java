@@ -58,7 +58,7 @@ public class KnowledgeBaseService {
                 .map(chunk -> new ScoredChunk(chunk, cosineSimilarity(chunk.vector, queryVector)))
                 .sorted((a, b) -> Double.compare(b.score, a.score))
                 .limit(3)
-                .collect(Collectors.toList());
+                .toList();
 
         Set<Integer> indicesToKeep = new HashSet<>();
         int neighborRadius = 2;

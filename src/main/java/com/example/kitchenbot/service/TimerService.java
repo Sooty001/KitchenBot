@@ -40,7 +40,7 @@ public class TimerService {
 
             SendMessage alert = new SendMessage();
             alert.setChatId(String.valueOf(chatId));
-            alert.setText("⏰ <b>ДЗЫНЬ-ДЗЫНЬ! Время вышло!</b> (" + TextUtil.formatDuration(seconds) + ")");
+            alert.setText("⏰ <b>Время вышло!</b> (" + TextUtil.formatDuration(seconds) + ")");
             alert.setParseMode("HTML");
             bot.execute(alert);
 

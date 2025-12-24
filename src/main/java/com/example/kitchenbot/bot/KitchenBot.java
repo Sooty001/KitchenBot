@@ -152,11 +152,6 @@ public class KitchenBot extends TelegramLongPollingBot {
     }
 
     private void sendTextWithTimers(long chatId, String text) {
-
-        System.out.println("--- RAW RESPONSE FROM AI ---");
-        System.out.println(text);
-        System.out.println("----------------------------");
-
         Pattern p = Pattern.compile("\\[\\[TIMER:(.+?)\\]\\]");
         Matcher m = p.matcher(text);
         List<Long> timers = new ArrayList<>();
